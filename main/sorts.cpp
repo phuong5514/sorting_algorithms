@@ -83,30 +83,40 @@ void mergeSort(int* array, int l, int r) {
 void merge(int* array, int left, int right, int mid) {
     int* tempArr = new int[right - left + 1];
     int leftArrIndex = left;
-    int rightArrIndex = right;
+    int rightArrIndex = mid + 1;
     int k = 0;
     int min = -1;
     while (leftArrIndex <= mid && rightArrIndex <= right) {
         if (array[leftArrIndex] < array[rightArrIndex]) {
-            min = array[leftArrIndex++];
+            min = array[leftArrIndex];
+            leftArrIndex++;
         }
         else {
-            min = array[rightArrIndex++];
+            min = array[rightArrIndex];
+            rightArrIndex++;
         }
-        tempArr[k++] = min;
+        tempArr[k] = min;
+        k++;
     };
 
     while (leftArrIndex <= mid) {
-        tempArr[k++] = array[leftArrIndex++];
+        tempArr[k] = array[leftArrIndex];
+        k++;
+        leftArrIndex++;
     }
 
     while (rightArrIndex <= right) {
-        tempArr[k++] = array[rightArrIndex++];
+        tempArr[k] = array[rightArrIndex];
+        k++;
+        rightArrIndex++;
     }
 
     for (int i = 0; i < k; i++) {
         array[left + i] = tempArr[i];
     }
+
+    delete[] tempArr;
+    tempArr = nullptr;
 };
 
 void quickSort(int* array, int l, int r) {

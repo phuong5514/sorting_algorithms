@@ -11,7 +11,6 @@ void (*DACSorts[2])(int*, int, int) = { mergeSort, quickSort };
 const char* iSortNames[5] = { "interchangeSort", "selectionSort", "bubbleSort", "heapSort", "radixSort" };
 const char* DACSortNames[2] = { "mergeSort", "quickSort" };
 
-// ref: https://stackoverflow.com/questions/21592040/simple-time-tracker-in-c
 states S[3]{ sorted, reversed, random };
 std::string stateStrings[3] = { "sorted", "reversed", "random" };
 void test(int n[]) {
