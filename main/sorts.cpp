@@ -141,20 +141,23 @@ void radixSort(int* array, int n) {
     while (!sorted) {
         sorted = true;
         for (int i = 0; i < n; i++) {
-            int index = int(array[i] / pow(10, k)) % 10;
+            int index = (array[i] / (int)pow(10, k)) % 10;
             buckets[index]->insertLast(array[i]);
         }
 
-        int j = 0;
-        for (int i = 0; i < n; i++) {
-            while (!buckets[j]->isEmpty()) {
+        for (int j = 0, i = 0; j < 10 && i < n; i++) {
+            while (buckets[j]->isEmpty()) {
                 sorted = false;
                 j++;
             }
             array[i] = buckets[j]->getFirst();
             buckets[j]->removeFirst();
         }
+        
         k++;
     }
 
+    for (int i = 0; i < 10; i++) {
+        delete buckets[i];
+    }
 };

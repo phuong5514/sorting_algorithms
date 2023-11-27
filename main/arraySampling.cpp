@@ -1,13 +1,6 @@
 #include "arraySampling.h"
 #include <random>
 
-enum states
-{
-	sorted,
-	reversed,
-	random
-};
-
 int* generateArray(int n, states state) {
 	int* array = new int[n];
 	switch (state)

@@ -136,6 +136,7 @@
   <ItemGroup>
     <ClCompile Include="arraySampling.cpp" />
     <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Node.cpp" />
     <ClCompile Include="sorts.cpp" />
     <ClCompile Include="testing.cpp" />
