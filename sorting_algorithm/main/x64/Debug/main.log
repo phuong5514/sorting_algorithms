@@ -1,7 +1,2 @@
-﻿  LinkedList.cpp
-  Node.cpp
-  sorts.cpp
-D:\workshop\homework\thuc hanh\dsa\w5+6\sorting_algorithm\main\sorts.cpp(137,9): error C2065: 'index': undeclared identifier
-D:\workshop\homework\thuc hanh\dsa\w5+6\sorting_algorithm\main\sorts.cpp(138,17): error C2065: 'index': undeclared identifier
-D:\workshop\homework\thuc hanh\dsa\w5+6\sorting_algorithm\main\sorts.cpp(139,5): error C2143: syntax error: missing ';' before '}'
-  Generating Code...
+﻿  main.cpp
+  main.vcxproj -> D:\workshop\homework\thuc hanh\dsa\w5+6\sorting_algorithm\x64\Debug\main.exe

@@ -17,11 +17,3 @@ int partition(int* array, int l, int r);
 
 void radixSort(int* array, int n);
 
-enum states
-{
-	sorted,
-	reversed,
-	random
-};
-
-int* generateArray(int n, states state);
